@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philosophy | English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+ <nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+        <a href="children.html"
+           data-en="Children"
+           data-hu="Gyermekek">Children</a>
+
+        <a href="adults.html"
+           data-en="Adults"
+           data-hu="Felnőttek">Adults</a>
+ 
+    </nav>
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hu')">HU</button>
+</div>
+</header>
+
+<section class="hero">
+<h1 data-en="Learning Through Play Is Not a Method. It’s a Mindset."
+    data-hu="A játékon keresztüli tanulás nem módszer. Hanem szemlélet.">
+Learning Through Play Is Not a Method. It’s a Mindset.
+</h1>
+
+<div class="quote"
+data-en="The child carries within himself the potential for development. It is up to us to give him the opportunity."
+data-hu="A gyermek magában hordozza a fejlődés lehetőségét. A mi feladatunk, hogy megadjuk számára az alkalmat.">
+“The child carries within himself the potential for development. It is up to us to give him the opportunity.”
+</div>
+
+<p data-en="Inspired by the philosophy of Maria Montessori."
+   data-hu="Maria Montessori szemlélete inspirál.">
+Inspired by the philosophy of Maria Montessori.
+</p>
+</section>
+
+<section class="section">
+<h2 data-en="Core Values"
+    data-hu="Alapértékek">
+Core Values
+</h2>
+
+<div class="values">
+
+<div class="value-card">
+<h3 data-en="🌿 Natural Learning"
+    data-hu="🌿 Természetes tanulás">
+🌿 Natural Learning
+</h3>
+<p data-en="Children learn best when they explore freely and feel safe."
+   data-hu="A gyermekek akkor tanulnak a legjobban, ha szabadon felfedezhetnek és biztonságban érzik magukat.">
+Children learn best when they explore freely and feel safe.
+</p>
+</div>
+
+<div class="value-card">
+<h3 data-en="💛 Emotional Safety"
+    data-hu="💛 Érzelmi biztonság">
+💛 Emotional Safety
+</h3>
+<p data-en="No fear. No shame. Mistakes are part of growth."
+   data-hu="Nincs félelem. Nincs szégyen. A hibák a fejlődés részei.">
+No fear. No shame. Mistakes are part of growth.
+</p>
+</div>
+
+<div class="value-card">
+<h3 data-en="🎨 Movement & Creativity"
+    data-hu="🎨 Mozgás és kreativitás">
+🎨 Movement & Creativity
+</h3>
+<p data-en="Language becomes alive through movement and creation."
+   data-hu="A nyelv mozgáson és alkotáson keresztül válik élővé.">
+Language becomes alive through movement and creation.
+</p>
+</div>
+
+<div class="value-card">
+<h3 data-en="✨ Confidence First"
+    data-hu="✨ Először önbizalom">
+✨ Confidence First
+</h3>
+<p data-en="Confidence comes before grammar. Courage before perfection."
+   data-hu="Az önbizalom megelőzi a nyelvtant. A bátorság a tökéletességet.">
+Confidence comes before grammar. Courage before perfection.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="closing">
+<h2 data-en="I am not here to teach perfect English. I am here to help you speak with courage."
+    data-hu="Nem azért vagyok itt, hogy tökéletes angolt tanítsak. Hanem hogy bátorsággal beszélj.">
+I am not here to teach perfect English. I am here to help you speak with courage.
+</h2>
+</section>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Children | English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+
+     <nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+        <a href="adults.html"
+           data-en="Adults"
+           data-hu="Felnőttek">Adults</a>
+
+        <a href="philosophy.html"
+           data-en="Philosophy"
+           data-hu="Filozófia">Philosophy</a>
+
+        
+    </nav>
+
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hu')">HU</button>
+</div>
+</header>
+
+<section class="hero">
+<h1 data-en="Little Steps in English"
+    data-hu="Apró lépések angolul">
+Little Steps in English
+</h1>
+
+<p data-en="A natural, playful introduction to English for children aged 1–6."
+   data-hu="Természetes, játékos angol bevezetés 1–6 éves gyermekeknek.">
+A natural, playful introduction to English for children aged 1–6.
+</p>
+</section>
+
+<section class="section">
+<h2 data-en="Why This Works"
+    data-hu="Miért működik">
+Why This Works
+</h2>
+
+<p data-en="Short attention-friendly activities. Sensory play. Movement. Repetition through songs. Emotional safety."
+   data-hu="Rövid figyelemhez igazított tevékenységek. Érzékszervi játék. Mozgás. Dalos ismétlés. Érzelmi biztonság.">
+Short attention-friendly activities. Sensory play. Movement. Repetition through songs. Emotional safety.
+</p>
+</section>
+
+<section class="section">
+<h2 data-en="Seasonal Programs"
+    data-hu="Évszakos programok">
+Seasonal Programs
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="assets/images/autumn.webp" alt="Autumn Program">
+<h3> Autumn</h3>
+<p data-en="Exploring leaves, colours, movement and songs."
+   data-hu="Levelek, színek, mozgás és dalok felfedezése.">
+Exploring leaves, colours, movement and songs.
+</p>
+</div>
+
+<div class="card">
+<img src="assets/images/winter.avif" alt="Winter Program">
+<h3>❄ Winter</h3>
+<p data-en="Snow, rhythm, celebration and magical vocabulary."
+   data-hu="Hó, ritmus, ünnepi élmények és varázslatos szókincs.">
+Snow, rhythm, celebration and magical vocabulary.
+</p>
+</div>
+
+<div class="card">
+<img src="assets/images/spring.jpg" alt="Spring Program">
+<h3> Spring</h3>
+<p data-en="Nature exploration and colourful creativity."
+   data-hu="Természet felfedezése és színes alkotás.">
+Nature exploration and colourful creativity.
+</p>
+</div>
+
+<div class="card">
+<img src="assets/images/summer.avif" alt="Summer Program">
+<h3> Summer</h3>
+<p data-en="Outdoor adventure and sensory discovery."
+   data-hu="Szabadtéri kaland és érzékszervi felfedezés.">
+Outdoor adventure and sensory discovery.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<h2 data-en="Give your child the courage to speak."
+    data-hu="Adjunk bátorságot a beszédhez.">
+Give your child the courage to speak.
+</h2>
+
+<a href="contact.html"
+   data-en="Contact Me"
+   data-hu="Kapcsolat">
+Contact Me
+</a>
+</section>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

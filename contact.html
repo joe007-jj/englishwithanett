@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+	<nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+    </nav>
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hu')">HU</button>
+</div>
+</header>
+
+<section class="hero">
+<h1 data-en="Let’s Begin Your Journey."
+    data-hu="Kezdjük el az utazást.">
+Let’s Begin Your Journey.
+</h1>
+
+<p data-en="Whether you are a parent or an adult learner, I would love to hear from you."
+   data-hu="Legyen szó szülőről vagy felnőtt tanulóról, örömmel várom a jelentkezésed.">
+Whether you are a parent or an adult learner, I would love to hear from you.
+</p>
+</section>
+
+<section class="section">
+
+<form action="#" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required
+data-en="Your Name"
+data-hu="Név">
+
+<input type="email" name="email" placeholder="Your Email" required
+data-en="Your Email"
+data-hu="Email cím">
+
+<select name="program"
+data-en="Select Program"
+data-hu="Válassz programot">
+<option value="">Select Program</option>
+<option>Children (1–6)</option>
+<option>Adults</option>
+</select>
+
+<textarea name="message" placeholder="Your Message"
+data-en="Your Message"
+data-hu="Üzenet"></textarea>
+
+<button type="submit"
+data-en="Send Message"
+data-hu="Üzenet küldése">
+Send Message
+</button>
+
+</form>
+
+<div class="contact-info">
+<p>📍 Hungary</p>
+<p>📧 englishwithanett@gmail.com</p>
+<p>📱 Instagram: @englishwithanett</p>
+</div>
+
+</section>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if(el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            el.placeholder = el.getAttribute('data-' + lang);
+        } else if(el.tagName === "SELECT") {
+            el.options[0].text = el.getAttribute('data-' + lang);
+        } else {
+            el.textContent = el.getAttribute('data-' + lang);
+        }
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Story | English With Anett</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">English With Anett</div>
+
+    <nav>
+        <a href="index.html" data-en="Home" data-hu="Főoldal">Home</a>
+        <a href="children.html" data-en="Children" data-hu="Gyermekek">Children</a>
+        <a href="adults.html" data-en="Adults" data-hu="Felnőttek">Adults</a>
+        <a href="contact.html" data-en="Contact" data-hu="Kapcsolat">Contact</a>
+    </nav>
+
+    <div class="lang-toggle">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('hu')">HU</button>
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero large">
+    <div>
+        <h1 data-en="My Name Is Anett – and It Means Grace."
+            data-hu="Anett vagyok – és a nevem jelentése: Kegyelem.">
+            My Name Is Anett – and It Means Grace.
+        </h1>
+    </div>
+</section>
+
+<!-- SECTION 1 -->
+
+<section class="section fade-in">
+    <div class="grid grid-2">
+
+        <div>
+            <img src="assets/images/an.png"
+                 alt="Anett childhood"
+                 class="home-image">
+        </div>
+
+        <div>
+            <p data-en="I grew up in a small town, and honestly, I was not good at English. For a long time, I believed that learning a language simply wasn’t for me."
+               data-hu="Egy kisvárosban nőttem fel, és őszintén szólva nem voltam jó angolból. Sokáig azt hittem, hogy a nyelvtanulás egyszerűen nem nekem való.">
+               I grew up in a small town, and honestly, I was not good at English. For a long time, I believed that learning a language simply wasn’t for me.
+            </p>
+
+            <p data-en="As the oldest of five children, I naturally developed a strong interest in working with kids—caring for others, being patient, and supporting younger siblings became part of my everyday life."
+               data-hu="Öt gyermek közül a legidősebbként természetesen alakult ki bennem a gyermekek iránti szeretet. A gondoskodás, türelem és a kisebb testvérek támogatása a mindennapjaim része volt.">
+               As the oldest of five children, I naturally developed a strong interest in working with kids—caring for others, being patient, and supporting younger siblings became part of my everyday life.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTION 2 -->
+
+<section class="section beige-bg fade-in">
+    <div class="grid grid-2">
+
+        <div>
+            <p data-en="At the end of high school, with the help of a wonderful private teacher and the support of my parents, I learned English in just one year. That year completely changed my life."
+               data-hu="A középiskola végén egy csodálatos magántanár és a szüleim támogatásának köszönhetően egy év alatt megtanultam angolul. Ez az év teljesen megváltoztatta az életemet.">
+               At the end of high school, with the help of a wonderful private teacher and the support of my parents, I learned English in just one year. That year completely changed my life.
+            </p>
+
+            <p data-en="Over the next 10 years, I traveled to 13 countries, made international friends, and experienced how language connects people across cultures."
+               data-hu="Az ezt követő 10 évben 13 országba utaztam, nemzetközi barátokat szereztem, és firsthand megtapasztaltam, hogyan köti össze a nyelv az embereket kultúrákon át.">
+               Over the next 10 years, I traveled to 13 countries, made international friends, and experienced how language connects people across cultures.
+            </p>
+        </div>
+
+        <div>
+            <img src="assets/images/ba.png"
+                 alt="Anett traveling"
+                 class="home-image">
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTION 3 -->
+
+<section class="section fade-in">
+    <div class="grid grid-2">
+
+        <div>
+            <img src="assets/images/fl.png"
+                 alt="Anett teaching"
+                 class="home-image">
+        </div>
+
+        <div>
+            <p data-en="In 2020, I earned my degree in English as a kindergarten teacher. My mission is to help children fall in love with English from an early age—in a natural, playful way, without fear."
+               data-hu="2020-ban diplomát szereztem angol nyelvű óvodapedagógusként. Küldetésem, hogy a gyermekek már korán, természetes és játékos módon, félelem nélkül szeressenek bele az angolba.">
+               In 2020, I earned my degree in English as a kindergarten teacher. My mission is to help children fall in love with English from an early age—in a natural, playful way, without fear.
+            </p>
+
+            <blockquote data-en="“The child carries within himself the potential for development. It is up to us to give him the opportunity.” – Maria Montessori"
+                        data-hu="„A gyermek önmagában hordozza a fejlődés lehetőségét. Rajtunk múlik, hogy megadjuk-e neki az alkalmat.” – Maria Montessori">
+                “The child carries within himself the potential for development. It is up to us to give him the opportunity.” – Maria Montessori”
+            </blockquote>
+
+            <p data-en="For me, learning through play is not just a method, but a mindset. Children move, create, explore—and learn naturally along the way."
+               data-hu="Számomra a játékos tanulás nem csupán módszer, hanem szemlélet. A gyermekek mozognak, alkotnak, felfedeznek – és közben természetesen tanulnak.">
+               For me, learning through play is not just a method, but a mindset. Children move, create, explore—and learn naturally along the way.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 English With Anett</p>
+</footer>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adults | English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+
+    <nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+        <a href="children.html"
+           data-en="Children"
+           data-hu="Gyermekek">Children</a>
+ 
+        <a href="philosophy.html"
+           data-en="Philosophy"
+           data-hu="Filozófia">Philosophy</a>
+
+        
+    </nav>
+
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hu')">HU</button>
+</div>
+</header>
+
+<section class="hero">
+<h1 data-en="It’s Never Too Late."
+    data-hu="Soha nem késő.">
+It’s Never Too Late.
+</h1>
+
+<p data-en="If English never came easily to you… you are exactly who I created this for."
+   data-hu="Ha az angol sosem ment könnyen… pontosan neked hoztam létre ezt.">
+If English never came easily to you… you are exactly who I created this for.
+</p>
+</section>
+
+<section class="section">
+<h2 data-en="How We Learn"
+    data-hu="Hogyan tanulunk">
+How We Learn
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3 data-en="Create & Express"
+    data-hu="Alkotás és önkifejezés">
+Create & Express
+</h3>
+<p data-en="We explore personal stories, culture and real-life topics through creative presentations."
+   data-hu="Személyes történeteken, kultúrán és valós témákon keresztül tanulunk.">
+We explore personal stories, culture and real-life topics through creative presentations.
+</p>
+</div>
+
+<div class="card">
+<h3 data-en="Play & Speak"
+    data-hu="Játék és beszéd">
+Play & Speak
+</h3>
+<p data-en="Role-play, improvisation and guided conversation without fear of mistakes."
+   data-hu="Szerepjáték, improvizáció és vezetett beszélgetés félelem nélkül.">
+Role-play, improvisation and guided conversation without fear of mistakes.
+</p>
+</div>
+
+<div class="card">
+<h3 data-en="Confidence First"
+    data-hu="Először önbizalom">
+Confidence First
+</h3>
+<p data-en="Grammar comes naturally after confidence. You speak from day one."
+   data-hu="A nyelvtan természetesen követi az önbizalmat. Már az első naptól beszélsz.">
+Grammar comes naturally after confidence. You speak from day one.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2 data-en="What Makes It Different"
+    data-hu="Mitől más">
+What Makes It Different
+</h2>
+
+<p data-en="No memorising lists. No pressure. 5–10 words integrated naturally. Real conversation. Real growth."
+   data-hu="Nincs szómagolás. Nincs nyomás. 5–10 szó természetes beépítése. Valódi beszélgetés. Valódi fejlődés.">
+No memorising lists. No pressure. 5–10 words integrated naturally. Real conversation. Real growth.
+</p>
+</section>
+
+<section class="cta">
+<h2 data-en="You don’t need perfect English. You need courage."
+    data-hu="Nem tökéletes angolra van szükséged. Hanem bátorságra.">
+You don’t need perfect English. You need courage.
+</h2>
+
+<a href="contact.html"
+   data-en="Book a Session"
+   data-hu="Időpont foglalás">
+Book a Session
+</a>
+</section>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+	<nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+        <a href="children.html"
+           data-en="Children"
+           data-hu="Gyermekek">Children</a>
+
+        <a href="adults.html"
+           data-en="Adults"
+           data-hu="Felnőttek">Adults</a>
+
+        <a href="philosophy.html"
+           data-en="Philosophy"
+           data-hu="Filozófia">Philosophy</a>
+
+       
+    </nav>
+	
+<div class="lang-toggle">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hu')">HU</button>
+</div>
+</header>
+
+<section class="hero">
+<h1 data-en="Parent Corner & Confidence Journal"
+    data-hu="Szülői sarok & Önbizalom napló">
+Parent Corner & Confidence Journal
+</h1>
+
+<p data-en="Gentle reflections on language learning, childhood and courage."
+   data-hu="Gondolatok a nyelvtanulásról, gyermekkorról és bátorságról.">
+Gentle reflections on language learning, childhood and courage.
+</p>
+</section>
+
+<section class="section">
+
+<div class="blog-grid">
+
+<div class="blog-card" onclick="toggleArticle(this)">
+<div class="category">Parents</div>
+<h3 data-en="Why Toddlers Learn Languages Faster"
+    data-hu="Miért tanulnak gyorsabban a kisgyermekek nyelvet?">
+Why Toddlers Learn Languages Faster
+</h3>
+<div class="blog-content"
+data-en="Between ages 1–6, the brain is highly flexible. Children absorb sound patterns naturally through repetition, rhythm and emotional safety."
+data-hu="1–6 éves korban az agy rendkívül rugalmas. A gyermekek természetesen szívják magukba a hangmintákat ismétlésen, ritmuson és érzelmi biztonságon keresztül.">
+Between ages 1–6, the brain is highly flexible...
+</div>
+</div>
+
+<div class="blog-card" onclick="toggleArticle(this)">
+<div class="category">Parents</div>
+<h3 data-en="How to Raise a Confident Bilingual Child"
+    data-hu="Hogyan neveljünk magabiztos kétnyelvű gyermeket?">
+How to Raise a Confident Bilingual Child
+</h3>
+<div class="blog-content"
+data-en="Confidence grows when language is playful and pressure-free. Speak, sing, repeat — and celebrate small progress."
+data-hu="Az önbizalom akkor fejlődik, ha a nyelv játékos és nyomásmentes. Beszéljünk, énekeljünk, ismételjünk — és ünnepeljük a kis lépéseket.">
+Confidence grows when language is playful...
+</div>
+</div>
+
+<div class="blog-card" onclick="toggleArticle(this)">
+<div class="category">Adults</div>
+<h3 data-en="Removing Fear from Adult Learning"
+    data-hu="A félelem oldása a felnőtt nyelvtanulásban">
+Removing Fear from Adult Learning
+</h3>
+<div class="blog-content"
+data-en="Adults often carry fear from school experiences. True progress begins when mistakes become safe."
+data-hu="A felnőttek gyakran iskolai élményekből hozott félelmet hordoznak. A valódi fejlődés akkor kezdődik, amikor a hibák biztonságossá válnak.">
+Adults often carry fear from school experiences...
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if(el.classList.contains('blog-content')) {
+            el.innerText = el.getAttribute('data-' + lang);
+        } else {
+            el.textContent = el.getAttribute('data-' + lang);
+        }
+    });
+}
+
+function toggleArticle(card) {
+    const content = card.querySelector('.blog-content');
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+    --beige: #F5EFE6;
+    --sage: #A8B5A2;
+    --brown: #8E7C68;
+    --white: #FBF8F3;
+    --accent: #C67B5C;
+    --dark: #5E5347;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--white);
+    color: var(--brown);
+    line-height: 1.6;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: var(--beige);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   LANGUAGE TOGGLE
+========================= */
+
+.lang-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* =========================
+   HERO SECTIONS
+========================= */
+
+.hero {
+    padding: 120px 10%;
+    text-align: center;
+    background: var(--beige);
+}
+
+.hero.large {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 80px 10%;
+}
+
+.section.center {
+    text-align: center;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--beige);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button.primary {
+    background: var(--sage);
+    color: white;
+}
+
+.button.primary:hover {
+    background: var(--accent);
+}
+
+.button.secondary {
+    background: white;
+    color: var(--sage);
+    border: 2px solid var(--sage);
+}
+
+.button.secondary:hover {
+    background: var(--sage);
+    color: white;
+}
+
+/* =========================
+   BLOG
+========================= */
+
+.blog-card {
+    cursor: pointer;
+}
+
+.blog-content {
+    display: none;
+    margin-top: 15px;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea, select {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Nunito', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: var(--sage);
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--accent);
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta {
+    background: var(--sage);
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--beige);
+    padding: 40px 10%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 80px 8%;
+    }
+
+    .section {
+        padding: 60px 8%;
+    }
+}
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+}
+
+.home-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.beige-bg {
+    background: var(--beige);
+}
+
+blockquote {
+    font-style: italic;
+    margin-top: 20px;
+    padding-left: 15px;
+    border-left: 3px solid var(--sage);
+    color: var(--brown);
+}
+
+.lang-toggle button {
+    background-color: #C94C4C;   /* soft warm red */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.lang-toggle button:hover {
+    background-color: #A63A3A;  /* darker red on hover */
+}

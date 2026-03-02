@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English With Anett</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">English With Anett</div>
+
+    <nav>
+        <a href="index.html"
+           data-en="Home"
+           data-hu="Főoldal">Home</a>
+
+        <a href="children.html"
+           data-en="Children"
+           data-hu="Gyermekek">Children</a>
+
+        <a href="adults.html"
+           data-en="Adults"
+           data-hu="Felnőttek">Adults</a>
+
+        <a href="philosophy.html"
+           data-en="Philosophy"
+           data-hu="Filozófia">Philosophy</a>
+
+        <a href="blog.html"
+           data-en="Blog"
+           data-hu="Blog">Blog</a>
+       
+    </nav>
+
+    <div class="lang-toggle">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('hu')">HU</button>
+    </div>
+</header>
+
+<section class="hero">
+<div>
+<h1 data-en="I once believed English wasn’t for me. Now I help others fall in love with it."
+    data-hu="Egykor azt hittem, az angol nem nekem való. Ma már másokat segítek beleszeretni.">
+I once believed English wasn’t for me. Now I help others fall in love with it.
+</h1>
+
+<p data-en="Learning English is not about perfection. It is about courage."
+   data-hu="Az angol tanulás nem a tökéletességről szól. Hanem a bátorságról.">
+Learning English is not about perfection. It is about courage.
+</p>
+
+<a href="children.html" class="button"
+   data-en="Explore My Programs"
+   data-hu="Programjaim megismerése">
+Explore My Programs
+</a>
+</div>
+</section>
+
+<section class="section fade-in">
+    <div class="grid grid-2">
+
+        <div>
+            <img src="assets/images/anett.jpg" alt="Anett teaching"
+                 class="home-image">
+        </div>
+
+        <div>
+            <h2 data-en="Meet Anett"
+                data-hu="Ismerj meg engem">
+                Meet Anett
+            </h2>
+
+            <p data-en="From struggling student to English teacher..."
+               data-hu="Küzdelmes diáktól angoltanárig...">
+               From struggling student to English teacher...
+            </p>
+
+            <a href="about.html" class="button secondary"
+				data-en="Read My Story"
+				data-hu="Történetem">
+				Read My Story
+				</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section center fade-in">
+
+    <h2 data-en="Choose Your Journey"
+        data-hu="Válaszd ki az utad">
+        Choose Your Journey
+    </h2>
+
+    <div class="grid grid-3">
+
+        <div class="card">
+            <h3 data-en="For Children"
+                data-hu="Gyermekeknek">
+                For Children
+            </h3>
+
+            <p data-en="Playful English for ages 1–6."
+               data-hu="Játékos angol 1–6 éveseknek.">
+               Playful English for ages 1–6.
+            </p>
+
+            <a href="children.html" class="button primary"
+               data-en="Explore"
+               data-hu="Megnézem">
+               Explore
+            </a>
+        </div>
+
+        <div class="card">
+            <h3 data-en="For Adults"
+                data-hu="Felnőtteknek">
+                For Adults
+            </h3>
+
+            <p data-en="Confidence-based learning."
+               data-hu="Önbizalomra épülő tanulás.">
+               Confidence-based learning.
+            </p>
+
+            <a href="adults.html" class="button primary"
+               data-en="Discover"
+               data-hu="Felfedezem">
+               Discover
+            </a>
+        </div>
+
+        <div class="card">
+            <h3 data-en="My Philosophy"
+                data-hu="Tanítási szemléletem">
+                My Philosophy
+            </h3>
+
+            <p data-en="Why courage comes before grammar."
+               data-hu="Miért fontosabb a bátorság a nyelvtannál.">
+               Why courage comes before grammar.
+            </p>
+
+            <a href="philosophy.html" class="button primary"
+               data-en="Read More"
+               data-hu="Tovább olvasom">
+               Read More
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="cta fade-in">
+    <h2 data-en="Ready to Begin?"
+        data-hu="Készen állsz?">
+        Ready to Begin?
+    </h2>
+
+    <a href="contact.html" class="button secondary"
+       data-en="Contact Me"
+       data-hu="Kapcsolat">
+       Contact Me
+    </a>
+</section>
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
